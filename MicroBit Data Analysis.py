@@ -529,12 +529,22 @@ np.savetxt(
     fmt="%.18g"
 )
 
-velocity_theoretical_ax_data = np.column_stack((time_vx, theoretical_vx))
+velocity_theoretical_vx_data = np.column_stack((time_vx, theoretical_vx))
 np.savetxt(
-    "velocity_theoretical_ax.csv",
-    time_theoretical_ax_data,
+    "velocity_theoretical_vx.csv",
+    velocity_theoretical_vx_data,
     delimiter=",",
-    header="time_ax,theoretical_ax",
+    header="time_ax,theoretical_vx",
+    comments="",
+    fmt="%.18g"
+)
+
+position_theoretical_px_data = np.column_stack((time_px, theoretical_px))
+np.savetxt(
+    "position_theoretical_px.csv",
+    position_theoretical_px_data,
+    delimiter=",",
+    header="time_px,theoretical_px",
     comments="",
     fmt="%.18g"
 )
